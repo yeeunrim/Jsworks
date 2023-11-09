@@ -1,0 +1,6 @@
+/* main.html */
+body{font-family: Lucida Grande;}
+#container{width: 960px; margin: 0 auto;}
+h1{text-align: center; color: palevioletred;}
+table{border-collapse: collapse; margin: 0 auto;}
+td{border: 1px solid gray; padding: 16px; text-align: center; background: rgba(255, 192, 203, 0.463);}
