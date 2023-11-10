@@ -11,7 +11,7 @@
   </style>
 </head>
 <body>
-  <button onclick="showhide()">버튼</button>
+  <button onclick="showhide()" id="button">숨기기</button>
   <div>
     <img src="images/flower.jpg" alt="flower" id="pic">
   </div>
@@ -28,9 +28,11 @@
       if(sw == true){
         pic.style.display = "none";
         sw = false;
+        document.getElementById("button").innerHTML = "보이기";
       } else{
         pic.style.display = "block";
         sw = true;
+        document.getElementById("button").innerHTML = "숨기기";
       }
     }
   </script>
