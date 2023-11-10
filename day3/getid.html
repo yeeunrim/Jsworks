@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getElementById() 사용</title>
+</head>
+<body>
+  <h1>My Web Page</h1>
+  <p id="print">이것은 p 태그입니다.</p>
+   <p id="print2"></p>
+  <script>
+    // document.write("This is a p elemnet.");
+    document.getElementById("print").innerHTML 
+      = "This is a p elemnet.";
+    let text = document.getElementById("print2")
+    text.innerHTML = "Hello, Nice to meet you:)";
+    text.style.color = "orange";
+  </script>
+</body>
+</html>

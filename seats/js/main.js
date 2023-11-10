@@ -6,8 +6,8 @@
 // 줄 
 let customer, colNum, rowNum;
 
-customer = 21;
-colNum = 5;
+customer = prompt("고객의 수를 입력하세요.");
+colNum = prompt("좌석의 열 수를 입력하세요.");
 
 // Key Point ! 나머지의 유무 (줄 수)
 if(customer % colNum === 0){

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>button 태그에서 함수 사용</title>
+</head>
+<body>
+  <button onclick="fnCheck()">로그인</button>
+
+  <script>
+    // 함수 생성 두 가지 방법
+
+    // 1.
+    // function fnCheck(){
+    //   alert("아이디나 비밀번호가 틀립니다.");
+    // }
+
+    // 2. 함수를 변수에 저장
+    // 호출할 때는 변수 이름에 ()를 붙여 사용함
+    let fnCheck = function(){
+      alert("아이디나 비밀번호가 틀립니다.");
+    }
+  </script>
+</body>
+</html>

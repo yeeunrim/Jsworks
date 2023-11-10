@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>var와 let의 차이</title>
+  <script>
+    // 1. var
+    var a = 1 ;
+    a = a + 1;
+    console.log(a);
+    
+    // 같은 이름의 변수는 할당할 수 없으나
+    // var의 경우는 같은 변수를 사용해도 오류가 나지 않는다.
+    var a = 3;
+    console.log(a);
+
+    // 2. let
+    let b = 10;
+    b = b + 1;
+    console.log(b);
+
+    // let의 경우는 같은 변수를 사용하면 오류 발생(알람)
+    // let b = 20;
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
