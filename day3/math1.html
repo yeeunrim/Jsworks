@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>절대값 함수 사용</title>
+</head>
+<body>
+  <script>
+    // 절대값 함수 정의
+    console.log("절대값 함수 정의 : myAbs()")
+    function myAbs(x){
+      if(x > 0){
+        return x;
+      } else{
+        return -x;
+      }
+    }
+    console.log("|-5| = " + myAbs(-5));
+
+    // 내장 객체 사용
+    console.log("내장 객체 사용 : math.abs()")
+    console.log("|-5| = " + Math.abs(-5))
+    console.log("|5| = " + Math.abs(5))
+  </script>
+</body>
+</html>

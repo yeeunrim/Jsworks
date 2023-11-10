@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>버튼에서 함수 호출하기</title>
+  <style>
+    #wrap{width: 800px; margin: 40px auto; text-align: center;}
+    button{padding: 10px 20px; font-size: 30px;}
+    p{font-size: 30px;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <button onclick="myAbs(prompt('숫자를 입력해주세요.(음수/양수 모두 가능)'))">절대값 계산</button>
+    <p id="print"></p>
+  </div>
+
+  <script>
+    function myAbs(x){
+      if(x > 0){
+        let p = document.getElementById("print");
+        p.innerHTML = x;
+      } else{
+        document.getElementById("print").innerHTML = -x;
+      }
+    }
+  </script>
+</body>
+</html>

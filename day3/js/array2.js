@@ -14,9 +14,17 @@ console.log(num);
 // 특정 요소(값)을 조회(검색)
 console.log(num[0]);
 
+// 수정(변경)
+num[1] = 40;
+
 // 전체 요소(값)을 조회(검색)
 for(let i=0; i<num.length; i++){
   console.log("num[" + i + "] = " + num[i]);
+}
+// for in 문
+document.write("for~in문 사용<br>")
+for(let i in num){
+  document.write("num[" + i + "] = " + num[i] + "<br>");
 }
 
 // 연산
@@ -30,4 +38,4 @@ for(let i=0; i<num.length; i++){
   sum += num[i];
 }
 avg = sum / num.length;
-console.log("총 합계 = " + sum + ", 평균 = " + avg);
+console.log("총 합계 = " + sum + ", 평균 = " + avg.toFixed(2));

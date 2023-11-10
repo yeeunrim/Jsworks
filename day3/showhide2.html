@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 보이기 및 숨기기</title>
+  <style>
+    body{margin: 0;}
+    button{padding: 10px 20px; font-size: 30px; margin: 10px 0 10px 10px;}
+    div{margin: 0 10px;}
+  </style>
+</head>
+<body>
+  <button onclick="showhide()">버튼</button>
+  <div>
+    <img src="images/flower.jpg" alt="flower" id="pic">
+  </div>
+
+  <script>
+    // 토글 버튼 - 2가지 기능
+    let sw = true;
+
+    function showhide(){
+      // 처음 호출하면 숨기기, 두번째 호출하면 보이기
+      // 상태를 바꿔놓아야 함
+      let pic = document.getElementById("pic");
+
+      if(sw == true){
+        pic.style.display = "none";
+        sw = false;
+      } else{
+        pic.style.display = "block";
+        sw = true;
+      }
+    }
+  </script>
+</body>
+</html>

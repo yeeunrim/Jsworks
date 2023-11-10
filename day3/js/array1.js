@@ -20,10 +20,18 @@ console.log(animal[1]);
 animal[2] = 'dog';
 
 // 특정 요소(값)을 삭제 - D(elete)
-// delete animal[1]; -> 데이터만 지워지고 공간은 남아있다.
+delete animal[1]; /* -> 데이터만 지워지고 공간은 남아있다. */
 
 // 전체 요소(값)을 조회(검색)
 // 0번 인덱스부터 시작하고 배열이 길이 미만일 것
 for(let i=0; i<animal.length; i++){
   document.write("animal[" + i + "] = " + animal[i] + "<br>");
+}
+
+document.write("--------------------<br>");
+
+// for in 문
+// 삭제된 데이터의 공간도 삭제되었다.
+for(let i in animal){
+  document.write(animal[i] + "<br>");
 }
