@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날짜 계산 프로그램</title>
+  <style>
+    body{font-family: Lucida Grande;}
+    .wrap{width: 300px; height: 300px; border-radius: 50%; 
+      margin: 40px auto; background-color: bisque; position: relative;}
+    h2{position: absolute; top: 90px; left: 75px;}
+    p{position: absolute; top: 150px; left: 65px;}
+    .accent{font-size: 1.3em; color: red; font-weight: bold;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h2>지금까지 몇 일 ?</h2>
+    <p>개강 이후 <span id="day" class="accent"></span>일 지났습니다.</p>
+  </div>
+
+  <script>
+    let today = new Date(); // 현재 일
+    let firstDay = new Date("2023-09-05"); // 특정한 날짜에 경우는 기입
+
+    // 현재일 - 시작일
+    let passedTime = today.getTime() - firstDay.getTime();
+
+    // 일로 환산 (정수로 변환)
+    passedTime = Math.floor(passedTime/(24*60*60*1000));
+
+    document.getElementById("day").innerHTML = passedTime;
+  </script>
+</body>
+</html>

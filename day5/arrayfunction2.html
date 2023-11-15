@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열 객체의 함수</title>
+</head>
+<body>
+  <script>
+    // concat(), join()
+    let numbers = [1, 2, 3];
+    let chars = ['a', 'b', 'c'];
+
+    document.write(numbers.join(" - ") + "<br>");
+    document.write(chars + "<br>");
+    document.write(chars.join(" : ") + "<br>");
+
+    let list = numbers.concat(chars);
+    document.write(list + "<br>");
+    document.write(list.join(" : ") + "<br>");
+
+    // indexOf(문자열) : 문자열의 첫번째 위치를 반환
+    // 문자열이 일치하면 문자열의 첫번째 위치를 반환(0번 이상 존재)
+    // 문자열이 일치하지 않으면 -1을 반환함
+    let str = "Hello world, Welcome world";
+    let idx1 = str.indexOf("world");
+    let idx2 = str.indexOf("korea");
+
+    document.write(idx1 + "<br>");
+    document.write(idx2 + "<br>");
+
+    // lastIndexOf("문자열") - 문자열의 뒤에서 찾아서 위치 반환함
+    let idx3 = str.lastIndexOf('world');
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setInterval() 함수 사용</title>
+</head>
+<body>
+  <script>
+    // setInterval(실행문, 밀리초) : 일정한 시간간격을 유지
+    // 2초에 한번 알림창 띄움
+
+    // 1. 실행 함수(익명 함수) : 한 번 실행할 때 사용
+    // setInterval(function(){
+    //   alert("안녕하세요!");
+    // }, 2000);
+
+    // 2. 이름있는 함수 (한 번 실행하는 경우는 괄호() 생략)
+    setInterval(winHello, 2000);
+
+    function winHello(){
+      alert("안녕!");
+    }
+  </script>
+</body>
+</html>

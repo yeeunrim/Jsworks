@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지역 변수의 유효범위</title>
+</head>
+<body>
+  <h3>지역 변수의 유효범위</h3>
+
+  <script>
+    // 1을 더하는 함수
+    function oneUp(){
+      let x = 1; // x는 지역변수
+      x = x + 1;
+      return x;
+    }
+    console.log("첫번째 호출 : " + oneUp());
+    console.log("두번째 호출 : " + oneUp());
+    console.log("x = " + x); // x가 소멸되어서 오류 발생
+  </script>
+</body>
+</html>

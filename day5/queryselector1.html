@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>querySelector() 함수 사용</title>
+</head>
+<body>
+  <h2 id="heading">국가의 수도</h2>
+  <p id="desc">대한민국의 수도는 서울입니다.</p>
+
+  <h2>세계의 수도</h2>
+  <ul>
+    <li class="city">베를린</li>
+    <li class="city">시드니</li>
+    <li class="city">베이징</li>
+    <li class="city">워싱턴</li>
+  </ul>
+
+  <script>
+    // getElementBy(id 선택자)
+    // querySelector(태그 선택자, id, class 선택자 가능)
+    document.querySelector("h2").style.color = "blue";
+
+    let cityList = document.querySelectorAll(".city");
+    cityList[1].style.backgroundColor = "yellowgreen";
+    cityList[2].style.color = "red";
+  </script>
+</body>
+</html>

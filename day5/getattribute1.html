@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getAttribute(), setAttribute()</title>
+</head>
+<body>
+  <input type="text" value="OK" class="input">
+  <p>입력상자를 버튼으로 변경하려면 클릭하시오.</p>
+  <button onclick="myFunction()">Try It</button>
+
+  <script>
+    function myFunction(){
+      let input = document.querySelector(".input")
+      console.log("value = " + input.getAttribute("value"));
+    }
+  </script>
+</body>
+</html>

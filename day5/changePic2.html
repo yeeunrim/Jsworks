@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onclick을 이용해 사진 바꾸기</title>
+</head>
+<body>
+  <div>
+    <img src="images/cup-1.png" alt="redcup" id="pic" onclick="changePic()">
+  </div>
+
+  <script>
+    let img = document.querySelector("#pic");
+    // img.onclick = changePic; // 괄호 생략
+
+    // function changePic(){
+    //   img.src = "images/cup-2.png"
+    // }
+
+    // 이름이 없는 실행함수 사용
+    // img.onclick = function(){
+    //   img.src = "images/cup-2.png"
+    // }
+
+    // 마우스를 객체에 올렸을 때 이벤트 발생
+    img.onmouseover = function(){
+      img.src = "images/cup-2.png"
+    }
+    img.onmouseout = function(){
+      img.src = "images/cup-1.png"
+    }
+  </script>
+</body>
+</html>

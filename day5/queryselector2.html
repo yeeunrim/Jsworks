@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>querySelector() 함수 사용</title>
+</head>
+<body>
+  <p>이름 <input type="text" class="name" value="임예은"></p>
+  <p>클릭하면 이름이 변경됩니다.</p>
+  <button onclick="myFunction()">클릭</button>
+
+  <script>
+    function myFunction(){
+      document.querySelector(".name").value = "이나경";
+    }
+  </script>
+</body>
+</html>

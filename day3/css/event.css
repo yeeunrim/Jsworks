@@ -1,0 +1,8 @@
+/* showhide-event.html */
+
+@charset "UTF-8";
+
+body{font-family: Lucida Grande;}
+#item{position: relative; width: 500px; margin: 40px auto;}
+.buttonShow{position: absolute; left: 10px; top: 273px;}
+.text{width: 400px; list-style: 1.5; text-align: justify; display: none;}

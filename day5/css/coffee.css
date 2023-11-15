@@ -1,0 +1,20 @@
+/* coffee.html */
+body{font-family: Lucida Grande;}
+
+#container{width: 650px; margin: 20px auto; box-sizing: border-box;}
+h2{margin: 10px 0 0 10px;}
+#small-pic{margin: 30px 8px;}
+.small{width: 100px; height: 100px; margin: 0 5px;}
+#prod-pic{float: left; margin: 20px 10px;}
+
+/* desc 스타일 */
+#desc{float: left; width: 250px; position: relative;}
+hr{clear: both;}
+#desc ul{list-style: none;}
+#desc ul li{line-height: 1.8;}
+button{padding: 10px; font-size: 13px; margin: 20px 3px; width: 200px;} 
+#view{position: absolute; right: 5px; top: 430px; text-decoration: none; color: gray;}
+#view:hover{text-decoration-line: underline;}
+
+/* detail 영역 */
+#detail{display: none;}

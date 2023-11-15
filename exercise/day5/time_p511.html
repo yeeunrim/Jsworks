@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>교쟤 p.511 예제 풀이</title>
+  <style>
+    body{font-family: Lucida Grande;}
+    #wrap{text-align: center;}
+    #calc2{color: red;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h3>3의 배수 찾기</h3>
+    <p id="calc"></p>
+    <p id="calc2"></p>
+  </div>
+
+  <script>
+    let x = prompt("몇까지 3의 배수를 찾을까요?");
+    let count = 0; // 전역 변수
+
+    if(x == null){
+      document.getElementById("calc").innerHTML = "입력이 취소되었습니다.";
+    } else if(isNaN(x)){
+      document.getElementById("calc").innerHTML = "숫자를 입력해주세요.";
+    } else{
+      x = parseInt(x); // 입력받은 문자를 숫자로 변환
+      for(let i = 1; i <= x; i++){
+        if(i % 3 === 0){
+          document.getElementById("calc").innerHTML += i + ", ";
+          count++;
+        }
+      }
+      document.getElementById("calc2").innerHTML = x + "까지 3의 배수의 개수 : " + count;
+    }
+  </script>
+</body>
+</html>

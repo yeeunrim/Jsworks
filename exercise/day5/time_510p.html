@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>교재 p.510 예제 풀이</title>
+  <style>
+    body{font-family: Lucida Grande;}
+    #wrap{text-align: center;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h3>4의 배수일까 아닐까</h3>
+    <p id="calc"></p>
+  </div>
+
+  <script>
+    let num = prompt("숫자를 입력하시오");
+
+    function fourX(){
+      if(num == null){
+
+      } else{
+        if(num % 4 == 0){
+          document.getElementById("calc").innerHTML = num + "는 4의 배수입니다.";
+        }else{
+          document.getElementById("calc").innerHTML = num + "는 4의 배수가 아닙니다.";
+        }
+      }
+    }
+    
+    fourX();
+  </script>
+</body>
+</html>
