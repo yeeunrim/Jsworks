@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>당첨자 발표</title>
+  <style>
+    section{width: 800px; margin: 0 auto; text-align: center;}
+    /* 글자 크기에 맞게 border 사이즈 정리 */
+    h1{border: 1px solid gray; display: inline-block; background-color: whitesmoke; padding: 10px 20px;} 
+    p{text-align: center;}
+  </style>
+</head>
+<body>
+  <section>
+    <h1>당첨자 발표</h1>
+  </section>
+
+  <script>
+    let member = prompt("전체 응모자 수를 입력하세요"); // 전체 응모자 수
+    let winners = new Array('x'); // 당첨자 수
+    x = parseInt(prompt("당첨자 수를 입력하세요"));
+
+    // 여러명 추첨
+    // 추첨된 결과를 배열에 저장
+    if(member === 'null'){
+      document.write("<p>입력을 취소했습니다.</p>");
+    } else if(member === ""){
+      document.write("<p>올바른 값을 입력해주세요.</p>");
+    } else if(isNaN(member)){
+      document.write("<p>숫자를 입력해 주세요.</p>");
+    } else if(winners === 'x'){
+      document.write("<p>올바른 값을 입력해주세요.</p>");
+    } else{
+      for(let i=0; i<x.length; i++){
+        let pickedOne = Math.floor(Math.random() * member) + 1; // 1~20부터 랜덤
+        winners[i] = pickedOne; // 랜덤으로 뽑힌 결과를 배열에 저장
+
+        // 중복 번호가 발생할 경우, 재추첨
+        for(let j=0; j<i; j++){
+          if(winners[j] == winners[i]){
+            i--;
+          }
+        }
+      }
+      document.write("<p>📩 전체 응모자 수는 " + member + "명입니다.</p>");
+      document.write("<p> 당첨자는 ");
+
+      member = parseInt(member);
+
+      // 출력
+      for(let i=0; i<winners.length; i++){
+        document.write(winners[i] + "번 ")
+      }
+      document.write("입니다. 축하드립니다! 🎉</p>");
+    }
+
+    // 디버깅
+    // 랜덤 결과 : 5 14 14 16 11
+    // winners[i=0] = 5 -> j=0 비교
+    // winners[i=1] = 14 -> j=0, 1 비교
+    // winners[i=2] = 14 -> j=0, 1, 2 비교
+    // winners[i=3] = 16
+    // winners[i=4] = 11   
+  </script>
+</body>
+</html>

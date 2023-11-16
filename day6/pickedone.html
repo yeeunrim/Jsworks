@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>당첨자 발표</title>
+  <style>
+    section{width: 800px; margin: 0 auto; text-align: center;}
+    /* 글자 크기에 맞게 border 사이즈 정리 */
+    h1{border: 1px solid gray; display: inline-block; background-color: whitesmoke; padding: 10px 20px;} 
+    p{text-align: center;}
+  </style>
+</head>
+<body>
+  <section>
+    <h1>당첨자 발표</h1>
+  </section>
+
+  <script>
+    let member = 20;
+
+    // 1명 추첨
+    let pickedOne = Math.floor(Math.random() * 20) + 1;
+    document.write("<p>📩 전체 응모자 수는 " + member + "명입니다.<br></p>")
+    document.write("<p>" + pickedOne + "번이 당첨됐습니다 ! 🎉</p>");
+  </script>
+</body>
+</html>

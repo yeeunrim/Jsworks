@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>location 객체 사용</title>
+  <style>
+    #content{width: 660px; margin: 20px auto;}
+    .show{border: 1px solid #333; padding: 10px;}
+    button{margin-top: 10px;}
+  </style>
+</head>
+<body>
+  <section id="content">
+    <h2>loaction 객체</h2>
+    <div class="show">
+      <script>
+        // url 경로 (문서의 위치)
+        document.write(location.href + "<br>");
+        // host 컴퓨터의 주소 (포트 포함)
+        document.write(location.host + "<br>");
+        // url protocol
+        document.write(location.protocol)
+      </script>
+    </div>
+
+    <button onclick="location.href='http://www.hrd.go.kr'">고용노동부 홈페이지로 이동하기</button>
+  </section>
+</body>
+</html>

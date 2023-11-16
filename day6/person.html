@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사람 객체 사용 예제</title>
+</head>
+<body>
+  <script>
+    // json = javascript 객체 
+    // java script object notation
+    let person = {
+      name : "임예은",
+      age : 25,
+      blood : 'A',
+      isMerried : "false",
+
+      play: function(){ // 객체의 소속 - 함수
+        alert("예은이가 밥을 먹는다 🍚");
+      }
+    }
+
+    person.play(); // 객체의 함수 사용
+
+    document.write("이름: " + person.name +  "<br>나이: " + person.age + "<br>혈액형: " + person.blood
+      + "<br>결혼여부 : " + person.isMerried);
+  </script>
+</body>
+</html>

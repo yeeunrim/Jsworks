@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 생성</title>
+</head>
+<body>
+  <script>
+    // 자바스트립트 객체 - json
+    let book = {
+      title : "웹 표준의 정석",
+      author : "고경희",
+      pages : 600,
+      price : 30000,
+
+      // 객체 내부에서 객체 호출할 때 this를 사용
+      info : function(){
+        alert("'" + this.title + "'의 분량은 " + this.pages + "쪽입니다.");
+      }
+    }
+
+    document.write("제목 : " + book.title + "<br>");
+    document.write("저자 : " + book.author + "<br>");
+    document.write("페이지 : " + book.pages + "쪽<br>");
+    document.write("기격 : " + book.price + "<br>");
+    
+    book.info();
+  </script>
+</body>
+</html>

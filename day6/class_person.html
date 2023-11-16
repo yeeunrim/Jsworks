@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>생성자 함수(클래스) 사용하기</title>
+</head>
+<body>
+  <script>
+    // 생성자 함수의 첫 글자는 대문자로 한다.
+    function Person(name, age, isMerried){
+      this.name = name;
+      this.age = age;
+      this.isMerried = isMerried;
+
+      this.info = function(){
+        if(this.isMerried === true){
+          document.write("기혼<br>");
+        } else{
+          document.write("미혼<br>");
+        }
+      }
+    }
+
+    // 1명 생성
+    let rim = new Person("임예은", 25, false);
+    document.write(rim.name + "<br>");
+    document.write(rim.age + "<br>");
+    rim.info();
+
+    // 2명 생성
+    let lee = new Person("이나경", 25, false);
+    document.write(lee.name + "<br>");
+    document.write(lee.age + "<br>");
+    lee.info();
+  </script>
+</body>
+</html>

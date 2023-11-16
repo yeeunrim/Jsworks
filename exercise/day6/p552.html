@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>교재 P.552 예제 풀이</title>
+</head>
+<body>
+  <script>
+    function number(num1, num2){
+      num1 = parseInt(prompt("수를 입력하세요."));
+      num2 = parseInt(prompt("수를 입력하세요."));
+
+      if(num1 > num2){
+        document.write(num1 +"(이)가 " + num2 + "보다 큽니다.");
+      } else if(num1 < num2){
+        document.write(num2 +"(이)가 " + num1 + "보다 큽니다.");
+      } else{
+        document.write("같습니다.");
+      }
+    }
+    number();
+  </script>
+</body>
+</html>

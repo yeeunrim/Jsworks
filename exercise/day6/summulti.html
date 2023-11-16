@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>교재 P.551 예제 풀이</title>
+</head>
+<body>
+  <script>
+    function sumMulti(x, y){
+      x = parseInt(prompt("수를 입력하세요."));
+      y = parseInt(prompt("수를 입력하세요."));
+
+      if(isNaN(x) || isNaN(y)){
+        console.log("수를 입력해주세요.");
+      } else {
+          if(x === y){
+          console.log("두수의 곱 : " + (x * y));
+        }else {
+          console.log("두수의 합 : " + (x + y));
+        }
+      }
+    }
+    sumMulti();
+  </script>
+</body>
+</html>

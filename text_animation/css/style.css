@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+body{height: 2000px; background: url(../images/dessert.jpg) no-repeat; 
+  background-attachment: fixed; background-size: cover;}
+h1{font-size: 5em; color: white; width: 200px; 
+  position: absolute; top: 100px; left: 200px; 
+  /* 애니메이션 */ 
+  animation: forward 1s ease-out;
+  /* animation-name: forward; 
+  animation-duration: 1s; 
+  animation-timing-function: ease-out; */ } 
+
+@keyframes forward {
+  from{
+    left: -100px;
+    opacity: 0;
+  }
+  to{
+    left: 200px;
+    opacity: 1;
+  }
+}
+
+@keyframes backward {
+  from{
+    left: 200px;
+    opacity: 1;
+  }
+  to{
+    left: -100px;
+    opacity: 0;
+  }
+}
