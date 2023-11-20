@@ -17,8 +17,18 @@
       let text = document.createTextNode("산뜻한 과일향의 마일드 로스트");
       p.appendChild(text);
 
+      // img 태그 - 속성
+      let img = document.createElement("img");
+      let src = document.createAttribute("src"); // 속성
+      let alt = document.createAttribute("alt"); 
+      src.value = "images/coffee-blue.jpg"; // 속성 값
+      alt.value = "커피잔";
+      img.setAttributeNode(src);  // img에 src 속성 붙임
+      img.setAttributeNode(alt);
+
       let div = document.getElementById("info");
-      div.appendChild(p);
+      div.appendChild(p); // 부모요소 <div>에 자식요소 <p> 연결
+      div.appendChild(img); // 부모요소 <div>에 자식요소 <img> 연결
     }
   </script>
  </div>

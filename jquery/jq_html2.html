@@ -8,8 +8,10 @@
   <script>
     $(function(){
       $("#click").click(function(){
+        // html() - 부모 요소의 하위에 요소가 생성됨
         $("#info").html("<p>숨겨진 텍스트입니다.</p>");
-        // $("#info").html("<img src='images/doit.jpg' alt='공부하자'>");
+        // append() - 부모 요소의 하위 끝에 생성됨
+        $("#info").append("<img src='images/doit.jpg' alt='공부하자'>");
       });
     })
   </script>
