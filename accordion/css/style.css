@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/* 공통 영역 */
+*{margin: 0; padding: 0;}
+ol{list-style: none;}
+a{text-decoration: none; color: #909090}
+
+/* section 영역 */
+#content{width: 1000px; margin: 30px auto;}
+#content h3{padding: 20px;}
+.accordion_box ol li{border-top: 4px solid salmon;}
+/* 불릿 버튼 변경 */
+.accordion_box ol li h4{margin: 20px 30px;
+  background: url("../images/bullet_down.png") no-repeat right}
+.accordion_box ol li.on h4{
+  background: url("../images/bullet_up.png") no-repeat right
+}
+.accordion_box ol li h4 span{margin-right: 10px; font-weight: 900;}
+
+/* p태그 내용 숨기기/보이기 */
+.accordion_box ol li p{line-height: 2; visibility: hidden;}
+.accordion_box ol li.on p{visibility: visible; padding: 30px 60px;
+  background-color: #eee;}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열 객체 함수</title>
+</head>
+<body>
+  <p id="demo"></p>
+
+  <script>
+    let num = [1, 2, 3];
+    num.push(4);
+    console.log(num);
+
+    /*let num2 = num.map(myFunction);
+
+    function myFunction(x){
+      return x * 2;
+    }*/
+
+    let num2 = num.map(function(x){
+      return x * 3;
+    })
+
+    console.log(num2)
+    document.getElementById("demo").innerHTML = num2;
+  </script>
+</body>
+</html>

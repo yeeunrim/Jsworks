@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slide 관련함수</title>
+  <script src="js/jquery-3.7.1.js"></script>
+  <script>
+    $(function(){
+      //slideUp()-위로 밀고 올라감, slideDown()
+      $(".up").click(function(){
+        $("p").slideUp();
+        //$("img").slideUp();
+      });
+
+      $(".down").click(function(){
+        $("p").slideDown();
+        //$("img").slideDown();
+      });
+
+      $(".toggle").click(function(){
+        $("p").slideToggle();
+        //$("img").slideToggle();
+      });
+    })
+  </script>
+</head>
+<body>
+  <p>운수 좋은 날</p>
+  <!-- <div>
+    <img src="images/coffee-blue.jpg" alt="커피잔">
+  </div> -->
+
+  <button class="up">Up</button>
+  <button class="down">Down</button>
+  <button class="toggle">Toggle</button>
+</body>
+</html>

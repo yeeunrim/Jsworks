@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배송정보 체크박스</title>
+  <link rel="stylesheet" href="css/order.css">
+</head>
+<body>
+  <div id="container">
+    <form action="order.jsp" method="post">
+      <fieldset>
+        <legend>주문 정보</legend>
+        <ul>
+          <li>
+            <label for="billingName">이름</label>
+            <input type="text" id="billingName" name="billingName">
+          </li>
+          <li>
+            <label for="billingTel">연락처</label>
+            <input type="text" id="billingTel" name="billingTel">
+          </li>
+          <li>
+            <label for="billingAddr">주소</label>
+            <input type="text" id="billingAddr" name="billingAddr">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>배송 정보</legend>
+        <ul>
+          <li>
+            <input type="checkbox" id="shippingInfo" name="shippingInfo" class="checkbox">
+            <label for="shippingInfo" class="checklabel">주문 정보와 배송 정보가 같습니다.</label>
+          </li>
+          <li>
+            <label for="shippingName">이름</label>
+            <input type="text" id="shippingName" name="shippingName">
+          </li>
+          <li>
+            <label for="shippingTel">연락처</label>
+            <input type="text" id="shippingTel" name="shippingTel">
+          </li>
+          <li>
+            <label for="shippingAddr">주소</label>
+            <input type="text" id="shippingAddr" name="shippingAddr">
+          </li>
+        </ul>
+      </fieldset>
+      <button type="submit" class="order">결제하기</button>
+    </form>
+  </div>
+
+  <script src="js/order.js"></script>
+</body>
+</html>

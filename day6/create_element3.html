@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 태그 생성</title>
+</head>
+<body>
+ <div id="wrap">
+  <h2>커피의 세계</h2>
+  <a href="#" onclick="addImg(); this.onclick='' ">더보기</a>
+  <div id="info"></div>
+
+  <script>
+    function addImg(){
+      let p = document.createElement("p");
+      let text = document.createTextNode("산뜻한 과일향의 마일드 로스트");
+      p.appendChild(text);
+
+      let div = document.getElementById("info");
+      div.appendChild(p);
+    }
+  </script>
+ </div>
+</body>
+</html>

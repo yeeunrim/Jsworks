@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 click()함수 사용</title>
+  <script src="js/jquery-3.7.1.js"></script>
+  <script>
+    //each() - 일치하는 각 요소에 대해 실행할 함수를 지정
+    $(document).ready(function(){
+      $("button").click(function(){
+        //index는 0번부터 시작
+        $("li").each(function(index, element){ 
+          alert(index + ": " + $(this).text());
+          console.log(index + ": " + $(this).text());  //li의 내용을 text()로 바꿈
+        })
+      })
+    })
+  </script>
+</head>
+<body>
+  <button>알림창 실행</button>
+
+  <ul>
+    <li>Coffee</li>
+    <li>Milk</li>
+    <li>Tea</li>
+  </ul>
+</body>
+</html>

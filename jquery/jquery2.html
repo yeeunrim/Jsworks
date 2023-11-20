@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,10 +7,13 @@
   <title>제이쿼리 예제</title>
   <script src="js/jquery-3.7.1.js"></script>
   <script>
-    // 제이쿼리 방식 - 실행 환경
+    //제이쿼리 방식 - 실행 환경
     $(document).ready(function(){
-      $("p").text("안녕:)");
-    })
+      //$(태그선택자, id선택자, class 선택자)
+      //text() - 텍스트를 추가(생성)함
+      $("#show").text("안녕~ JQuery!");
+      $('#show').css({'font-size': '2em', 'color': 'blue'});
+    });
   </script>
 </head>
 <body>

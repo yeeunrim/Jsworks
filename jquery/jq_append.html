@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jquery의 append() 함수</title>
+  <script src="js/jquery-3.7.1.js"></script>
+  <script>
+    $(document).ready(function(){
+      //append(태그) - 선택한 요소의 끝에 새요소 추가
+      //html(태그) - 부모 요소에 하위 요소를 생성함
+      $("#name").css('background-color', 'lightgreen');
+      $(".info").append("<p>만나서 반가와요~</p>");
+      //$(".info p").next().text("<p>만나서 반가와요~</p>");
+      $(".info").append("<img src='images/doit.jpg' alt='공부하자'>");
+      $(".pic").html("<img src='images/coffee-blue.jpg' alt='커피잔'>");
+    })
+  </script>
+</head>
+<body>
+  <h2>어서 오세요~ 방문을 환영합니다.</h2>
+  <div class="info">
+    <p id="name">내 이름은 김초엽입니다.</p>
+    <p>나는 서울에 살아요..</p>
+  </div>
+  <div class="pic"></div>
+</body>
+</html>

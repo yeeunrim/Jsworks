@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습 문제</title>
+  <style>
+    body{text-align: center; line-height: 2;}
+  </style>
+</head>
+<body>
+  <h2>3의 배수 찾기</h2>
+  <p id="show"></p>
+  <script>
+    let n = prompt("몇까지의 배수를 구할까요?");     //몇까지인지 변수에 할당
+    let count = 0;  //전역 변수
+
+    if(n == null){
+      document.write("입력이 취소되었습니다.");
+    }else if(isNaN(n)){
+      document.write("숫자를 입력해주세요");
+    }else{
+      n = parseInt(n);  //입력받은 문자를 숫자로 변환
+      let numbers = []; //배수를 저장할 빈 배열 선언
+      for(let i = 1; i <= n; i++){
+        if(i % 3 == 0){
+          numbers.push(i);   //배수를 1개씩 저장
+          count++;
+        }
+      }
+      console.log(numbers);
+    
+      document.getElementById("show").innerHTML = numbers;
+      document.write("<br>"+ n + "까지 3의 배수의 개수: " + count);
+    }   
+  </script>
+</body>
+</html>

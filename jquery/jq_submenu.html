@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서브메뉴 만들기</title>
+  <script src="js/jquery-3.7.1.js"></script>
+  <style>
+    body{font-family: Lucida Grande;}
+    .wrap ul{list-style: none;}
+    .wrap a{text-decoration: none; color: #555;}
+    .wrap ul{display: none;}
+  </style>
+  <script>
+    $(function(){
+      $(".btn1 a").on('mouseover', function(){
+        // 이벤트 대상 - a태그임 (this)
+        // $(this).parent().next().show();
+        $(this).parent().next().css("display", "block");
+        $(".ul2").hide();
+      });
+
+      $(".btn2 a").on("mouseover", function(){
+        $(this).parent().next().show();
+        $(".ul1").css("display", "none");
+      })
+    })
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <p class="btn1">
+      <a href="#">학교안내</a>
+    </p>
+    <ul class="ul1">
+      <li><a href="#">학교장인사말</a></li>
+      <li><a href="#">학교연혁</a></li>
+      <li><a href="#">찾아오시는길</a></li>
+    </ul>
+
+    <p class="btn2">
+      <a href="#">학교생활</a>
+    </p>
+    <ul class="ul2">
+      <li><a href="#">공지사항</a></li>
+      <li><a href="#">가정통신문</a></li>
+      <li><a href="#">동아리활동</a></li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리의 css() 함수 사용</title>
+  <script src="js/jquery-3.7.1.js"></script>
+  <script>
+    $(document).ready(function(){
+      //함수인자 - css("속성", "속성값")
+      //객체 표기법 - css({"속성":"값", "속성":"값"})
+      $("body").css('background', 'skyblue');
+      $("#demo").css({'color': 'yellow', 'font-size': '1.3em'});
+      $(".list").css({'list-style': 'square'});
+      $(".list > li").css('margin', '10px');
+    })
+  </script>
+</head>
+<body>
+  <h2>제이쿼리 예제</h2>
+  <p id="demo">css() 함수</p>
+  <ul class="list">
+    <li>봄</li>
+    <li>여름</li>
+    <li>가을</li>
+    <li>겨울</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>새로운 노드(엘리먼트) 생성 - 제이쿼리</title>
+  <script src="js/jquery-3.7.1.js"></script>
+  <script>
+    $(function(){
+      $("#click").click(function(){
+        $("#info").html("<p>숨겨진 텍스트입니다.</p>");
+        // $("#info").html("<img src='images/doit.jpg' alt='공부하자'>");
+      });
+    })
+  </script>
+</head>
+<body>
+  <h2>DOM 노드 추가하기</h2>
+  <a href="#" id="click">더보기</a>
+  <div id="info"></div>
+</body>
+</html>

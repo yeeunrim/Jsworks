@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문자열 함수</title>
+</head>
+<body>
+  <script>
+    //단어를 찾아 일치하면 실행
+    //문자열을 찾으면 - indexOf("문자열") >= 0
+    //문자열을 못 찾으면 - indexOf("문자열") = -1 반환함
+    while(true){
+      let input = prompt("단어를 입력해주세요");
+
+      if(input.indexOf("안녕") >= 0){
+        alert("안녕하세요");
+      }else if(input.indexOf("시") >= 0 || input.indexOf("분") >= 0){
+        const now = new Date();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        alert("현재 시간은 " + hours + "시 " + minutes + "분입니다.");
+      }
+      else if(input.indexOf("잘가") >= 0){
+        alert("안녕히 가세요");
+        break;
+      }else{
+        alert("모르는 단어입니다.");
+      }
+    }
+  </script>
+</body>
+</html>

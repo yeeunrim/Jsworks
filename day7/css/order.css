@@ -1,0 +1,10 @@
+#container{width: 600px; margin: 0 auto;}
+fieldset{margin-bottom: 30px; border: 1px solid #ccc;}
+legend{font-size: 1.2em; font-weight: bold; margin-left: 10px;}
+ul li{list-style: none; margin: 20px;}
+.checkbox{width: 20px;}
+.checklabel{width: 250px;}
+label{width: 70px; float: left; text-align: right; margin-right: 10px;}
+input{width: 250px; height: 30px; border: 1px solid #ccc; border-radius: 5px;}
+
+.order{width: 100%; padding: 10px; border: 1px solid #ccc;}

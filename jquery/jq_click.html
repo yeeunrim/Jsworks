@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리 click()함수 사용</title>
+  <script src="js/jquery-3.7.1.js"></script>
+  <script>
+    $(document).ready(function(){
+      //태그 선택자(p), 클래스 선택자(.this)
+      $(".this").click(function(){
+        alert("문단이 클릭되었습니다.");
+      })
+    })
+  </script>
+</head>
+<body>
+  <p class="this">여기를 클릭하세요.</p>
+</body>
+</html>
