@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's Weather</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>Today's Weather</h1>
+  <h3 class="result"></h3>
+
+  <script>
+    // 날짜를 변수화
+    const date = new Date();
+    console.log(date);
+    let  year = date.getFullYear();        // 2024
+    let month = '0' + date.getMonth() + 1; // 011
+    let day = '0' + date.getDate();        // 025
+
+    month = month.substring(1);            // substring(인덱스) 인덱스부터 끝까지 추출
+    day = day.substring(1);
+
+    let today = year + month + day;        // 20240125
+
+    $.ajax({
+      type: "GET",
+      url: "https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=zsy2cxIsnAul6JnzOV1ul3h%2FKXxNtT7Xw7Q6BOieVjRXmFxmTjKs1S02jYe6mE8sRHEQ38e8sfupjwYKLKImsQ%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=" 
+        + today + "&base_time=0600&nx=55&ny=127",
+      success: function(data){
+        console.log(data);
+        console.log(data.response.body.items.item[3].obsrValue);
+        let T1H = data.response.body.items.item[3];
+        let REH = data.response.body.items.item[1];     
+        let WSD = data.response.body.items.item[7];    
+        let content = T1H.obsrValue + "˚C " + REH.obsrValue + "%" + WSD.obsrValue + "m/s";
+
+        $('.result').text(content);
+      },
+      error: function(error){
+        console.log(error);
+      }
+    });
+  </script>
+</body>
+</html>
